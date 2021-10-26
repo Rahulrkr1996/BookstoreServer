@@ -1,0 +1,177 @@
+body{
+	overflow: hidden;
+}
+.Contents{
+	background-color: #96eaff;
+}
+.Main-content{
+	padding-bottom: 10px;
+	height: 100%;
+}
+.Header{
+	height: 10vh;
+	padding: 10px;
+}
+.Footer{
+	height: 15vh;
+	background-color: #000;
+	color: white;
+}
+.BookList {
+  margin-top: 2vh;
+  overflow-y: auto;
+  height: 65vh;
+}
+.Card {
+  padding: 0.5vw 0.5vh;
+  box-shadow: 0.5vw 0.5vh #888888;
+  margin-top: 2vh;
+  background-color: white;
+  /*display: inline;*/
+}
+.Card p{
+    padding: 5px;
+	margin-top: 2vh;
+	font-size: 12px;
+	font-family: "Monaco", monospace;
+}
+
+.Card .desc{
+	font-size: 10px;
+}
+
+.Card label{
+	box-shadow: 0.2vw 0.2vh #888888;
+	background-color: #5bb6cd;
+	padding: 10px;
+	color: white;
+	width: 100%;
+}
+
+.Card .image-container{
+    text-align: center;
+    display:block;
+}
+
+.Card .image-container img{
+	width: 20vh;
+	height: 15vw;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.Card .change-container .btn button{
+	width: 2.5vw;
+    height: 2.5vw;
+    background-color: orange;
+    background-repeat: no-repeat;
+	background-size: cover;
+	cursor: pointer;
+	border: none;
+}
+.Card .change-container .btn-add button{
+	background-image: url("../image/plus.png");
+    /*background-color: grey;*/
+}
+.Card .change-container .btn-update button{
+	background-image: url("../image/update.png");
+    /*background-color: grey;*/
+}
+.Card .change-container .btn-remove button{
+	background-image: url("../image/delete.png");
+    /*background-color: grey;*/
+}
+
+.Searchbar {
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.Searchbar a {
+  float: left;
+  color: black;
+  text-align: center;
+  margin-right: 10px;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid;
+}
+
+/* Change the color of links on hover */
+.Searchbar a:hover {
+  background-color: #5bb6cd;
+  color: white;
+}
+
+/* Style the "active" element to highlight the current page */
+.Searchbar a.active {
+  background-color: #96eaff;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.Searchbar input[type=search] {
+  width: 50vw;
+  float: right;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 2px solid;
+}
+/* Style the search box inside the navigation bar */
+.Searchbar button {
+  float: right;
+  padding: 0.75%;
+  background: none;
+  cursor: pointer;
+}
+
+/*!* The popup form - hidden by default *!*/
+/*.Popup {*/
+/*  !*display: none;*!*/
+/*  border: 2px solid #888888;*/
+/*  background-color: white;*/
+/*}*/
+
+/*.Popup p{*/
+/*  font-size: 10px;*/
+/*}*/
+/*.Popup label{*/
+/*  height: 20%;*/
+/*}*/
+/*!* Full-width input fields *!*/
+/*.Popup input{*/
+/*  height: 100%;*/
+/*  vertical-align: center;*/
+/*  width: 80%;*/
+/*  font-size: 10px;*/
+/*  border: none;*/
+/*  outline: none;*/
+/*  background: none;*/
+/*}*/
+/*.Popup input[type=number] {*/
+/*  color: black;*/
+/*}*/
+
+/*!* When the inputs get focus, do something *!*/
+/*.Popup input[type=number]:focus {*/
+/*  color: red;*/
+/*}*/
+
+/*.Popup button{*/
+/*  color: white;*/
+/*  padding: 2px 5px;*/
+/*  font-size: 10px;*/
+/*  border: none;*/
+/*  cursor: pointer;*/
+/*  margin-bottom: 10px;*/
+/*}*/
+/*!* Set a style for the submit/login button *!*/
+/*.Popup .btn-ok {*/
+/*  background-color: #04AA6D;*/
+/*}*/
+
+/*!* Add a red background color to the cancel button *!*/
+/*.Popup .btn-cancel {*/
+/*  background-color: red;*/
+/*}*/

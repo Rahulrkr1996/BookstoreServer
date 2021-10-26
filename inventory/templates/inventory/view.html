@@ -1,0 +1,83 @@
+{% extends "inventory/base.html" %}
+{% load static %}
+{% block bookList %}
+    {% for book in books %}
+        {% if books.count == 0 %}
+							<div class="row Card" style="background-color:#ffffff;">
+        {% else %}
+        					<div class="row Card" style="background-color:#8BFFA6;">
+        {% endif %}
+								<div class="col-md-2 col-sm-6 col-xs-12 col-lg-2 image-container">
+									<img src="{{ book.image }}" alt="{% static 'inventory/image/book.png' %}">
+								</div>
+								<div class="col-md-8 col-sm-6 col-xs-12 col-lg-8">
+                                    <p><b>{{ book.title }}</b> | {{ book.authors }}</p>
+                                    <hr>
+                                    <div class="desc"><b>{{ book.desc }}</b></div>
+                                </div>
+								<div class="col-md-2 col-sm-12 col-xs-12 col-lg-2">
+									<div class="row">
+										<div class="col-md-12 col-sm-12  col-xs-12 col-lg-12">
+					 						{% if book.count > 0 %}
+												<label>In Inventory : {{ book.count }} </label>
+											{% else %}
+												<label>Out Of Stock </label>
+											{% endif %}
+										</div>
+									</div>
+									<div class="row change-container">
+                                        {% if book.count > 0 %}
+                                            <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4 btn btn-add">
+                                                <button onclick="addBook()" type="button"></button>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4 btn btn-update">
+                                                <button onclick="updateBook()" type="button"></button>
+                                            </div>
+                                            <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4 btn btn-remove">
+                                                <button onclick="removeBook()" type="button"></button>
+                                            </div>
+                                        {% else %}
+                                            <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12 btn btn-add">
+                                                <button onclick="addBook()" type="button"></button>
+                                            </div>
+                                        {% endif %}
+                                    </div>
+{#                                    <div class="row">#}
+{#                                        <div  id="modifyPopup" class="col-md-12 col-sm-12 col-xs-12 col-lg-12 Popup">#}
+{#                                            <p>Enter the number of books to be added </p>#}
+{#                                            <label><input type="number" placeholder="Enter value" name="update_value" required></label>#}
+{#                                            <button onclick="onOkClick()" type="submit" class="btn-ok">OK</button>#}
+{#                                            <button type="button" class="btn-cancel" onclick="closeForm()">Cancel</button>#}
+{#                                        </div>#}
+{#                                    </div>#}
+								</div>
+							</div>
+	{% endfor %}
+{#    <script>#}
+{#        function openForm() {#}
+{#          document.getElementById("modifyPopup").style.display = "block";#}
+{#          document.getElementById("modifyButtons").disable = "false";#}
+{#        }#}
+{##}
+{#        function closeForm() {#}
+{#          document.getElementById("modifyPopup").style.display = "none";#}
+{#          document.getElementById("modifyButtons").disable = "true";#}
+{#        }#}
+{##}
+{#        function addBook() {#}
+{#            openForm();#}
+{#            {% url 'searchBooks' %}#}
+{#        }#}
+{#        function onOkClick() {#}
+{##}
+{#        }#}
+{#        function updateBook() {#}
+{#            openForm();#}
+{#        }#}
+{##}
+{#        function removeBook() {#}
+{#            openForm();#}
+{#        }#}
+{##}
+{#    </script>#}
+{% endblock bookList %}
